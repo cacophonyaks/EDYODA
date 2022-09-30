@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Header } from "./components/Header";
+import { useSelector } from "react-redux";
+import {Route,Routes} from "react-router-dom";
+import {Dashboard} from "./components/Dashboard";
+import {CalcenlationAndLocations} from "./components/CancelationRateAndLocations";
+import {YearsAndmedium} from "./components/YearsAndMedium";
+import { MonthBookingData } from "./components/MonthBookingData";
+import {StartingPage} from "./components/Starting";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 function App() {
+  const isLoggedin= useSelector(state => state.isLoggedin);
+  console.log(isLoggedin);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+    <header>
+      <Header/>
+    </header>
+    <main>
+      <Routes>
+        <Route path="/" element={<StartingPage/>}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/calcenlationAndLocation" element={<CalcenlationAndLocations/>} />
+        <Route path="/yearsAndMedium" element={<YearsAndmedium />} />
+        <Route path="/months" element={<MonthBookingData />} />
+      </Routes>
+    </main>
+</React.Fragment>
+    
   );
 }
 

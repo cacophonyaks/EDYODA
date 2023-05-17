@@ -1,0 +1,145 @@
+.mainpage{
+    background-image: url(./BackGround.png);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.heading{
+width: 799px;
+height: 70px;
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 600;
+font-size: 56px;
+line-height: 125%;
+/* identical to box height, or 70px */
+
+display: flex;
+align-items: center;
+letter-spacing: -0.01em;
+
+color: #FFFFFF;
+
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 1;
+}
+.signupheading{
+    /* width: 54px;
+height: 19px; */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.01em;
+
+color: #3C4852;
+
+
+/* Inside auto layout */
+
+/* flex: none;
+order: 1;
+flex-grow: 0; */
+}
+
+.content_list{
+    /* Text  */
+
+
+width: 601px;
+height: 32px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 100%;
+/* identical to box height, or 32px */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.03em;
+
+color: #f7f7f7;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 70px;
+}
+
+.redbox{
+    background: linear-gradient(135deg, rgba(222, 67, 19, 0.2) 0%, rgba(222, 67, 19, 0.2) 0.75%, rgba(222, 67, 19, 0.2) 2.92%, rgba(222, 68, 20, 0.2) 6.37%, rgba(223, 69, 21, 0.2) 10.97%, rgba(223, 72, 22, 0.2) 16.59%, rgba(224, 75, 24, 0.2) 23.1%, rgba(225, 80, 27, 0.2) 30.37%, rgba(227, 86, 31, 0.2) 38.27%, rgba(229, 94, 36, 0.2) 46.66%, rgba(231, 104, 43, 0.2) 55.41%, rgba(235, 117, 51, 0.2) 64.39%, rgba(238, 132, 60, 0.2) 73.47%, rgba(243, 149, 71, 0.2) 82.52%, rgba(248, 169, 84, 0.2) 91.41%, rgba(254, 193, 99, 0.2) 100%);
+}
+.limitedtimeofferopara{
+    /* width: 129px;
+height: 19px; */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 120%;
+/* or 19px */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #DE4313;
+
+
+/* Inside auto layout */
+
+/* flex: none;
+order: 0;
+flex-grow: 0; */
+}
+
+.taxpara{
+    margin-top: 10px;
+    /* width: 167px;
+height: 19px; */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 120%;
+/* or 19px */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #3C4852;
+
+
+/* Inside auto layout */
+
+/* flex: none;
+order: 0;
+flex-grow: 0; */
+}
+
+.headingdiv{
+    margin-top: 50px;
+}

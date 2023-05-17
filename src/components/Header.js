@@ -2,61 +2,60 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {AppBar, Button, Toolbar,Box, Typography, Tabs,Tab} from "@mui/material";
-import {useSelector} from "react-redux";
-import {useDispatch} from "react-redux";
-import { authActions } from '../store';
-
+import EDYODA from "./EDYODA.png"
+import Searchicon from './searchicon.png';
+import downarrow from './dwonarrow.png';
 export const Header = () => {
  
-
-  const dispatch = useDispatch();
-  const isLoggedin = useSelector(state => state.isLoggedin);
 
   const [value, setValue] = useState();
 
   return (
     <AppBar 
       position="sticky"
-      sx={{background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,120,100,1) 35%, rgba(0,212,255,1) 100%)"}}
+      sx={{background: "white",color: "black",boxShadow: "none"}}
       >
         <Toolbar>
-            <Typography fontFamily={'cursive'} variant="h4">DeVMgM</Typography>
-            {isLoggedin && 
-            <Box display="flex" marginLeft={'auto'} marginBottom ='auto'>
+            <img src={EDYODA} alt="EDYODA" width="180" height="30" />
+          
+            <Box display="flex" marginLeft={'50px'} marginTop={"auto"} marginBottom ='auto' color={"black"}>
 
               <Tabs variant="h4" textColor="inherit" value={value} onChange={(e,val) => setValue(val)}>
-                <Tab LinkComponent={Link}  to="/dashboard" label="Dashboard" />
-                <Tab label="Booking List" disabled />
-                <Tab label="Add Booking" disabled />
-                <Tab label="Payment Histry" disabled />
+                <span> <Tab style={{marginRight:"20px"}}  label="Course" /><span><img src={downarrow} alt="" height={10} width={20}></img></span></span>
+                <span> <Tab style={{marginRight:"20px"}}  label="Programs" /><span><img src={downarrow} alt="" height={10} width={20}></img></span></span>
               </Tabs>
 
             </Box> 
-            }
+            
             <Box  display='flex' marginLeft="auto">
-              {!isLoggedin&& <><Button 
-                LinkComponent={Link}  to="/login" 
-                variant='contained' 
-                sx={{margin:1,borderRadius: 5}} 
-                color="warning">
-                Login
-              </Button>
+              <img style={{
+                marginTop: 10,
+                marginRight: 20,
+                marginLeft: 20,
+
+              }} src={Searchicon} alt="Searchicon" width="20" height="20" />
+             
+              <Typography style={{
+                marginTop: 10,
+                marginRight: 20,
+                marginLeft: 20,
+                color: "black",
+                fontWeight: "normal",
+                fontSize: 15,
+                fontFamily: "sans-serif",
+
+              }} >Login</Typography>
               <Button 
                 LinkComponent={Link}  to="/signup" 
                 variant='contained' 
                 sx={{margin:1,borderRadius: 5}} 
-                color="warning">
-                Signup
-              </Button> </>}
-              {isLoggedin && <><Typography marginTop={2} fontFamily={'sans-serif'} >{localStorage.getItem('Name')}</Typography><Button 
-                onClick={() => dispatch(authActions.logout())
-                }
-                LinkComponent={Link}  to="/" 
-                variant='contained' 
-                sx={{margin:1,borderRadius: 5}} 
-                color="warning">
-                Logout
-              </Button></>}
+                style={{
+                  backgroundColor: "#0096FF",
+                }}
+                >
+                Join Now
+              </Button> 
+              
             </Box>
         </Toolbar>
     </AppBar>
